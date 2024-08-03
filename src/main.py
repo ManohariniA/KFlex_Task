@@ -44,15 +44,14 @@ def filter_and_prepare_outages(outages, site_info):
     filtered_outages = []
     for outage in outages:
         if datetime.fromisoformat(outage['begin'][:-1]) < datetime(2022, 1, 1):
-            continue
-        for device in site_info['devices']:
-            if outage['id'] == device['id']:
-                filtered_outages.append({
-                    "id": outage['id'],
-                    "name": device['name'],
-                    "begin": outage['begin'],
-                    "end": outage['end']
-                })
+            for device in site_info['devices']:
+                if outage['id'] == device['id']:
+                    filtered_outages.append({
+                        "id": outage['id'],
+                        "name": device['name'],
+                        "begin": outage['begin'],
+                        "end": outage['end']
+                    })
     save_to_file(filtered_outages, 'files/filtered_outages.json')
     return filtered_outages
 
