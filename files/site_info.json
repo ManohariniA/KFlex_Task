@@ -1,0 +1,10 @@
+{
+    "id": "norwich-pear-tree",
+    "name": "Norwich Pear Tree",
+    "devices": [
+        {
+            "id": "1",
+            "name": "Device 1"
+        }
+    ]
+}

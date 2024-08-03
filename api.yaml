@@ -1,0 +1,43 @@
+openapi: 3.0.1
+info:
+  title: KrakenFlex API
+  description: API for KrakenFlex Backend Test
+  version: '1.0'
+paths:
+  /outages:
+    get:
+      summary: Get all outages
+      responses:
+        '200':
+          description: Successful response
+  /site-info/{siteId}:
+    get:
+      summary: Get site information
+      parameters:
+        - name: siteId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+  /site-outages/{siteId}:
+    post:
+      summary: Post site outages
+      parameters:
+        - name: siteId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+      responses:
+        '200':
+          description: Successful response
