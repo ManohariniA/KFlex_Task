@@ -9,7 +9,7 @@ This project is a solution to the KrakenFlex Back End Test.
 1. Clone the repository:
     ```bash
     git clone <repo_url>
-    cd krakenflex_backend_test
+    cd KFlex_Task
     ```
 
 2. Create and activate a virtual environment:
