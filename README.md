@@ -27,6 +27,7 @@ This project is a solution to the KrakenFlex Back End Test.
 
 To run the program:
 ```bash
+cd src
 python main.py
 
 ## Running tests from the root of the project.
